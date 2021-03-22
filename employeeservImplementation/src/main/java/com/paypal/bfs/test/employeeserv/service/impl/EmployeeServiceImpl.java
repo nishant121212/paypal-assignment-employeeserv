@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public Employee employeeGetById(String id) {
 		com.paypal.bfs.test.employeeserv.entity.Employee employee = employeeRepository.findById(Integer.valueOf(id))
     			.orElseThrow(EmployeeNotFoundException::new);
-    	return EmployeeMapper.mapEntityToModel(employee);
+    		return EmployeeMapper.mapEntityToModel(employee);
 	}
 
 	@Override
