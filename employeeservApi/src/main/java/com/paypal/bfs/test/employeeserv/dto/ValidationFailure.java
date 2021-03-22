@@ -22,15 +22,15 @@ public class ValidationFailure {
 	/**
 	 * field name
 	 */
-	@JsonProperty("field")
-    @JsonPropertyDescription("field name")
-	private String field;
+        @JsonProperty("field")
+        @JsonPropertyDescription("field name")
+        private String field;
 	
 	/**
 	 * validation failure message
 	 */
 	@JsonProperty("message")
-    @JsonPropertyDescription("validation failure message")
+        @JsonPropertyDescription("validation failure message")
 	private String message;
 
 	public String getField() {
