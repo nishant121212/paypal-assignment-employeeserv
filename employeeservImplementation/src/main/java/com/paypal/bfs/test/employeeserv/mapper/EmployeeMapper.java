@@ -21,21 +21,21 @@ public class EmployeeMapper {
 	 * @return {@link Employee}
 	 */
 	public static Employee mapEntityToModel(com.paypal.bfs.test.employeeserv.entity.Employee employee) {
-    	Employee employeeModel = new Employee();
-    	employeeModel.setId(employee.getId());
-    	employeeModel.setFirstName(employee.getFirstName());
-    	employeeModel.setLastName(employee.getLastName());
-    	employeeModel.setDateOfBirth(employee.getDateOfBirth());
-        Address address = new Address();
-        address.setLine1(employee.getAddressLine1());
-        address.setLine2(employee.getAddressLine2());
-        address.setCity(employee.getCity());
-        address.setState(employee.getState());
-        address.setCountry(employee.getCountry());
-        address.setZipCode(employee.getZipCode());
-        employeeModel.setAddress(address);
-        return employeeModel;
-    }
+		Employee employeeModel = new Employee();
+		employeeModel.setId(employee.getId());
+		employeeModel.setFirstName(employee.getFirstName());
+		employeeModel.setLastName(employee.getLastName());
+		employeeModel.setDateOfBirth(employee.getDateOfBirth());
+		Address address = new Address();
+		address.setLine1(employee.getAddressLine1());
+		address.setLine2(employee.getAddressLine2());
+		address.setCity(employee.getCity());
+		address.setState(employee.getState());
+		address.setCountry(employee.getCountry());
+		address.setZipCode(employee.getZipCode());
+		employeeModel.setAddress(address);
+		return employeeModel;
+        }
 	
 	/**
 	 * Maps Employee service model {@link Employee} to entity {@link com.paypal.bfs.test.employeeserv.entity.Employee}
