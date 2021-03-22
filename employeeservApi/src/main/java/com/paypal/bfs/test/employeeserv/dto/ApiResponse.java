@@ -51,33 +51,33 @@ public class ApiResponse {
      * 
      * @param errorCode {@link ErrorCode}
      */
-	public ApiResponse(ErrorCode errorCode) {
-		this.code = errorCode.getCode();
-		this.message = errorCode.getMsg();
-	}
+    public ApiResponse(ErrorCode errorCode) {
+	this.code = errorCode.getCode();
+	this.message = errorCode.getMsg();
+    }
 
-	public List<ValidationFailure> getFieldValidation() {
-		return fieldValidation;
-	}
+    public List<ValidationFailure> getFieldValidation() {
+	return fieldValidation;
+    }
 
-	public void setFieldValidation(List<ValidationFailure> fieldValidation) {
-		this.fieldValidation = fieldValidation;
-	}
+    public void setFieldValidation(List<ValidationFailure> fieldValidation) {
+	this.fieldValidation = fieldValidation;
+    }
 
-	public String getCode() {
-		return code;
-	}
+    public String getCode() {
+	return code;
+    }
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+    public void setCode(String code) {
+	this.code = code;
+    }
 
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public String getMessage() {
+	return message;
+    }
+	
+    public void setMessage(String message) {
+	this.message = message;
+    }
 
 }
