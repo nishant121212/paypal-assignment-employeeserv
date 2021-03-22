@@ -31,28 +31,28 @@ import com.paypal.bfs.test.employeeserv.exception.ErrorCode;
 public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(EmployeeNotFoundException.class)
-    public ResponseEntity<Object> handleExceptions(EmployeeNotFoundException employeeNotFoundException, WebRequest webRequest) {
-       ApiResponse apiResponse = new ApiResponse(ErrorCode.EMPLOYEE_NOT_FOUND);
-       return new ResponseEntity<>(apiResponse, HttpStatus.NOT_FOUND);
-    }
+        public ResponseEntity<Object> handleExceptions(EmployeeNotFoundException employeeNotFoundException, WebRequest webRequest) {
+           ApiResponse apiResponse = new ApiResponse(ErrorCode.EMPLOYEE_NOT_FOUND);
+           return new ResponseEntity<>(apiResponse, HttpStatus.NOT_FOUND);
+        }
 	
 	@ExceptionHandler(EmployeeServiceException.class)
-    public ResponseEntity<Object> handleExceptions(EmployeeServiceException employeeServiceException, WebRequest webRequest) {
-       ApiResponse apiResponse = new ApiResponse(ErrorCode.EMPLOYEE_SERVICE_EXCPTION);
-       return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+        public ResponseEntity<Object> handleExceptions(EmployeeServiceException employeeServiceException, WebRequest webRequest) {
+           ApiResponse apiResponse = new ApiResponse(ErrorCode.EMPLOYEE_SERVICE_EXCPTION);
+           return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 	
 	@ExceptionHandler(DataAccessException.class)
-    public ResponseEntity<Object> handleExceptions(DataAccessException dataAccessException, WebRequest webRequest) {
-       ApiResponse apiResponse = new ApiResponse(ErrorCode.DATA_BASE_EXCEPTION);
-       return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+        public ResponseEntity<Object> handleExceptions(DataAccessException dataAccessException, WebRequest webRequest) {
+           ApiResponse apiResponse = new ApiResponse(ErrorCode.DATA_BASE_EXCEPTION);
+           return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 	
 	@ExceptionHandler(Exception.class)
-    public ResponseEntity<Object> handleExceptions(Exception exception, WebRequest webRequest) {
-       ApiResponse apiResponse = new ApiResponse(ErrorCode.INTERNAL_SERVER_ERROR);
-       return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+        public ResponseEntity<Object> handleExceptions(Exception exception, WebRequest webRequest) {
+           ApiResponse apiResponse = new ApiResponse(ErrorCode.INTERNAL_SERVER_ERROR);
+           return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 	
 	@Override
 	protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers,
