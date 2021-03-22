@@ -26,11 +26,11 @@ public class EmployeeResourceImpl implements EmployeeResource {
 	@Autowired
 	private EmployeeService employeeService;
 	
-    @Override
-    public ResponseEntity<Employee> employeeGetById(String id) {
-    	log.info("fetching employee details for: {}", id);
-        return new ResponseEntity<>(employeeService.employeeGetById(id), HttpStatus.OK);
-    }
+        @Override
+        public ResponseEntity<Employee> employeeGetById(String id) {
+            log.info("fetching employee details for: {}", id);
+            return new ResponseEntity<>(employeeService.employeeGetById(id), HttpStatus.OK);
+        }
 
 	@Override
 	public ResponseEntity<Employee> createEmployee(Employee employee) {
